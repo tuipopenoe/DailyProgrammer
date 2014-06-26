@@ -3,7 +3,7 @@
 
 def getInput():
     print("Enter your paragraph: ")
-    paragraph = input()
+    paragraph = raw_input()
 
     return paragraph
 
@@ -17,7 +17,7 @@ def createHTML():
                         </head>
                         <body>
                         </body>
-                            <p>""" + getInput() +
+                            <p>""" + getInput() + \
             """             </p>
                         </body>
                     </html>"""
