@@ -1,5 +1,5 @@
 # Tui Popenoe
-# Challenge 166b
+# Challenge 166b Planetary Gravity
 
 import sys
 import math

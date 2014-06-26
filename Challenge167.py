@@ -1,5 +1,5 @@
 # Tui Popenoe
-# Challenge 167
+# Challenge 167 HTML Markup Generator
 
 def getInput():
     print("Enter your paragraph: ")
@@ -13,6 +13,8 @@ def createHTML():
     output ="""<!DOCTYPE html>
                     <html>
                         <head>
+                            <link rel='stylesheet'
+        href='//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' 
                             <title></title>
                         </head>
                         <body>

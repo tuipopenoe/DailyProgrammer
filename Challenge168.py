@@ -1,5 +1,5 @@
 # Tui Popenoe
-# Challenge #168
+# Challenge #168 Final Grades
 
 import sys
 import random
