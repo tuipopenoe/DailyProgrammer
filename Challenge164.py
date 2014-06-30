@@ -42,3 +42,14 @@ def removeLetter(letter, word):
 def sumElements(array):
     """Return the sum of elements in an array."""
     return sum(array)
+
+def bubbleSort(array):
+    """Return a sorted array using a bubble sort."""
+    for i in range(0, len(array)-2):
+        for i in range(0, len(array)-2):
+            if array[i] > array[i+1]:
+                temp = array[i]
+                array[i] = array[i+1]
+                array[i+1] = temp
+
+    return array
