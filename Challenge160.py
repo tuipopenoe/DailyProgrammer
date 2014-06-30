@@ -1,6 +1,12 @@
 # Tui Popenoe
 # Challenge 160 Trigonometric Triangle Trouble
 
+"""
+    Implementation to solve for unknown values in a triangle given a variable
+    number of known angles and sides.
+    Accepts input as a file or a series of command line arguments.
+"""
+
 import math
 
 a = 0.0
@@ -39,7 +45,12 @@ def getInput(char, val):
 
 def pythagoreas(s=None, r=None, h=None):
     if(s and h):
-        
-    if(r and h):
-        
 
+    if(r and h):
+
+
+def calculateAttributes(sides, angles):
+    if angles == 1 and sides == 2:
+
+    if angles == 2 and sides == 1:
+        

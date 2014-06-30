@@ -1,6 +1,11 @@
 # Tui Popenoe
 # Challenge 161 Blackjack
 
+""" Implementatoin of a simulation of blackjack hands. Calculates the 
+    percentage of hands dealt that are blackjack (21) given a variable number 
+    of decks of cards. Accepts input as a text file or a command line argument.
+"""
+
 import random
 import sys
 
