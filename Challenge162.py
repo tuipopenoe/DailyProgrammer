@@ -22,18 +22,45 @@
 
 import sys
 
-def decompress(n, list):
+def getInput(filename='input.txt'):
+    f = open(filename, 'r')
+    dictionary = list()
+    compressedText = list()
 
+    n = int(f.readline())
 
+    for i in range(n):
+        dictionary.append(f.readline())
+
+    compressedText.append(f.readlines().split())
+
+    f.close()
+
+    return [dictionary, compressedText]
+
+def decompress(dictionary, text):
+    output = list()
+    for line in text:
+        for word in line:
+            if isinstance(word, int):
+                output.append(dictionary[word])
+            elif word[-1] == '^':
+                output.append(dictionary[word[:-1]].capitalize())
+            elif word[-1] == '!':
+                output.append(dictionary[word[:-1].upper()])
+            elif word == '-':
+                output.append(word)
+            elif word == '.' or word == ',' or word == '?' or word == '!' or \
+                word == '.' or word == ',':
+                output.append(word)
+            elif word == 'R' or word == 'r':
+                output.append('\n')
+            elif word == 'E' or word == 'e':
+                printDecyptedText(output)
+
+def printDecryptedText(output):
+    print(''.join(output))
 
 def main():
-    f = open('input.txt', 'r')
-
-    count = int(f.readline())
-
-    l = []
-
-    for i in range(0, count):
-        l.append(f.readline())
-
-    
+    inputs = getInput(sys.argv[1])
+    decompress(inputs[0], inputs[1])
