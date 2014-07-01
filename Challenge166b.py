@@ -1,6 +1,8 @@
 # Tui Popenoe
 # Challenge 166b Planetary Gravity
 
+"""Calculate the weight of an object upon the surface of a planet."""
+
 import sys
 import math
 
