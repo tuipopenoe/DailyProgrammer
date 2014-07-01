@@ -1,13 +1,17 @@
 # Tui Popenoe
 # Challenge 167 HTML Markup Generator
 
+"""Implementation creates an HTML wrapper for the input paragraph."""
+
 def getInput():
+    """Get the input paragraph to wrap in HTML."""
     print("Enter your paragraph: ")
     paragraph = raw_input()
 
     return paragraph
 
 def createHTML():
+    """Create an HTML wrapper for the given paragraph."""
     f = open('index.html', 'w')
 
     output ="""<!DOCTYPE html>

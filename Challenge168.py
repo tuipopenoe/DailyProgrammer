@@ -1,10 +1,15 @@
 # Tui Popenoe
 # Challenge #168 Final Grades
 
+"""Implementation generates n random students and 5 scores for each student."""
+
 import sys
 import random
 
 def generateGrades(n, f, l):
+    """Generates an array of n dictionaries representing students, given an
+    array of first names l and an array of last names l. """
+
     n = int(n)
 
     output = []
@@ -36,15 +41,19 @@ def generateGrades(n, f, l):
     return output
 
 def generateLastName(lastNames):
+    """Picks a random last name from a list of last names."""
     return lastNames[random.randint(0, len(lastNames)-1)]
 
 def generateFirstName(firstNames):
+    """Picks a random last name from a list of last names."""
     return firstNames[random.randint(0, len(firstNames)-1)]
 
 def generateScore():
+    """Generate a random score. 2 sigfig precision."""
     return format(random.random()*100, '.2f')
 
 def main(f, l):
+    """Seed the random function using system time and generate grades."""
     random.seed()
     generateGrades(sys.argv[1], f, l)
 
