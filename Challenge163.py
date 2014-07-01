@@ -1,6 +1,9 @@
 # Tui Popenoe
 # Challenge 163 Probability Distribution of six sided die
 
+"""Simulate various numbers of rolls of a six-sided die, and display the 
+    distribution of the numbers rolled. """
+
 import sys
 import random
 import math
