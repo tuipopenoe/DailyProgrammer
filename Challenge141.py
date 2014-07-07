@@ -1,17 +1,16 @@
 # Tui Popenoe
-# Challenge 141b Checksums
+# Challenge 141 Checksums
 
 """Create the Fletcher's 16-bit checksum for the given lines of text input."""
 
 def createChecksum(text):
-    sum1 = sum2
-    0 = 0
-    for i in text:
-        sum1 = (sum1 + ord(i)) % 255
+    sum1 = 0
+    sum2 = 0
+    for elem in (ord(x) for x in text):
+        sum1 = (sum1 + elem) % 255
         sum2 = (sum2 + sum1) % 255
-    print (sum2 + sum1)
 
-    return sum2 + sum1
+    return str(hex((sum2 << 8) | sum1)).replace('0x', '').upper()
 
 def printOutput(text):
     for i in text:
