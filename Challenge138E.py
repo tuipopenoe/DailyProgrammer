@@ -25,6 +25,9 @@ def main():
     for i in range(len(args)):
         args[i] = float(args[i])
 
+    for i in range(len(args2)):
+        args2[i] = float(args2[i])
+
     repulsionForce(args[0], args[1], args[2], args2[0], args2[1], args2[2])
 
 if __name__=='__main__':
