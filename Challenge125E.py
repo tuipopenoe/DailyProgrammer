@@ -33,10 +33,11 @@ def removeCommon(lst, char):
     for i in lst:
         if i == char:
             lst.remove(i)
+    return lst
 
 def topThree(lst):
-    common = mostCommon(lst)
     for i in range(3):
+        common = mostCommon(lst)
         print(common)
         lst = removeCommon(lst, common)
 
