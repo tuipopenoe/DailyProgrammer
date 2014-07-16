@@ -5,7 +5,7 @@ import sys
 
 def orderedVowels(string):
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-    print(string)
+    #print(string)
     for i in string:
         if len(vowels) == 0:
             return True
