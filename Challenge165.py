@@ -29,7 +29,7 @@ def life(filename=None):
             else:
                 newGrid += grid[x][y]
         newGrid += '\n'
-    grid = newGrid.split()
+    grid.append(newGrid.split())
 
     printGrid(grid)
 
@@ -49,8 +49,12 @@ def getAdjacent(grid, x, y, X, Y):
 
 def printGrid(grid):
     """Print the grid of cells"""
+    print(grid)
     print('\n'.join(grid))
 
 def main():
     if sys.argv[1]:
         life(sys.argv[1])
+
+if __name__=='__main__':
+    main()
