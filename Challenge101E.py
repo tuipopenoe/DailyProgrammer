@@ -19,7 +19,7 @@ def non_repeating_years(n, m):
             count = 0
         del digits[:]
 
-    return non_repeating
+    return (non_repeating, count)
 
 def main():
     if len(sys.argv) > 1:
