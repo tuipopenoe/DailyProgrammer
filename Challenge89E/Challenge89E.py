@@ -14,3 +14,8 @@ def variance(lst):
         sqd_diff += math.pow(i - mean(i), 2)
     return mean(sqd_diff)
 
+def standard_deviation(lst):
+    return math.sqrt(variance(lst))
+
+def main():
+    
