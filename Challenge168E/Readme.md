@@ -1,3 +1,5 @@
+# Description
+
 We know arrays. We index into them to get a value. What if we could apply this 
 to a string? But the index finds a "word". Imagine being able to parse the 
 words in a string by giving an index. This can be useful for many reasons.
