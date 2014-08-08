@@ -1,7 +1,11 @@
 # Tui Popenoe
 # Challenge83I.py - Indexed File Search
 
+""" Create an index of the words used in the given files, and search for files
+that contain the given words."""
+
 import ast
+
 
 def index_files(fileList):
     masterIndex = {}
@@ -16,8 +20,9 @@ def index_files(fileList):
                 masterIndex[j] = [i]
     return masterIndex
 
+
 def index_words(fileList):
-    index = list() 
+    index = list()
     for i in fileList:
         f = open(i, 'r')
         words = f.read().split()
@@ -41,6 +46,7 @@ def search_words(wordList, index):
     found = [x for x in output if output.count(x) == len(wordList)]
     return found
 
+
 def main():
     if len(sys.argv) > 1:
         if sys.argv[1] == 'index':
@@ -57,3 +63,6 @@ def main():
         print('Invalid arguments')
         print('Use "index file1 file2 file3 ..."')
         print('Or "search word1 word2 word3..."')
+
+if __name__ == '__main__':
+    main()

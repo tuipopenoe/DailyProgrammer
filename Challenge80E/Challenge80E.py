@@ -1,7 +1,11 @@
 # Tui Popenoe
 # Challenge80E.py - Anagrams
 
+""" Given a line separated lowercase dictionary file, find anagrams for the
+given input word. """
+
 import sys
+
 
 def find_anagrams(word, dictionary_file):
     output = list()
@@ -22,16 +26,17 @@ def find_anagrams(word, dictionary_file):
                 pass
     return output
 
+
 def main():
     if len(sys.argv) == 2:
         print('\n'.join(find_anagrams(sys.argv[1], 'english_dictionary.txt')))
-    elif len(sys.argv) > 2:
-        print('\n'.join(find_anagrams(sys.argv[1], sys.argv[1])))
+    elif len(sys.argv) == 3:
+        print('\n'.join(find_anagrams(sys.argv[1], sys.argv[2])))
     else:
-        print('Invalid arguments: search for a word in an english dictionary'\
-            'by default, or a word in a dictionary file')
+        print('Invalid arguments: search for a word in an english dictionary'
+              'by default, or a word in a dictionary file')
         print('word')
         print('word dictionary_file')
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()

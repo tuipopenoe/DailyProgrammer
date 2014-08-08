@@ -1,29 +1,35 @@
 # Tui Popenoe
 # Challenge83H.py - Digits of the Square Root of 2
 
-import decimal
+""" Calculate the first 100000 digits of the square root of 2. """
+
+from decimal import *
 import difflib
 
+
 def calculate_digits():
-    with open('digits.txt', 'w') as f:
+    with open('digits.txt', 'a') as f:
         getcontext().prec = 100000
-        x = Decimal(2).sqrt()
+        x = str(Decimal(2).sqrt())
         f.write(x)
+
 
 def compare_decimals():
     inp = ''
     dec = ''
-    with open('input.txt', 'r') as f1 and open('digits.txt', 'r') as f2:
-        inp = f1.read().splitlines()
-        dec = f2.read().splitlines()
+    with open('input.txt', 'r') as f1:
+        with open('digits.txt', 'r') as f2:
+            inp = f1.read()
+            dec = f2.read()
 
     for line in difflib.unified_diff(inp, dec, fromfile='input.txt',
-        tofile='digits.txt' lineterm=''):
+                                     tofile='digits.txt'):
         print(line)
+
 
 def main():
     calculate_digits()
     compare_decimals()
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
