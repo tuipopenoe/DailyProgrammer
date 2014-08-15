@@ -1,6 +1,9 @@
 # Tui Popenoe
 # Challenge76E.py - Title Case
 
+""" Convert all words in a string to Title Case (first letter capitalized)
+ignoring words in the list of exceptions"""
+
 import sys
 
 def title_case(string, exceptions):

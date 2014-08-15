@@ -1,5 +1,5 @@
 # Tui Popenoe
-# Challenge74E.def 
+# Challenge74E - Zeckendorf
 
 import math
 import sys

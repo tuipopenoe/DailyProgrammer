@@ -1,6 +1,9 @@
 # Tui Popenoe
 # Challenge68E.py - Emirp
 
+""" Return a list of all prime numbers less than n where the reverse of the 
+number is also a prime number, but not a prime palindrome"""
+
 import sys
 
 
