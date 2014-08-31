@@ -18,7 +18,6 @@ def graph(f, low, high, tests):
         print(bar)
 
 
-
 def two_dice():
     return random.randint(1, 6) + random.randint(1, 6)
 
