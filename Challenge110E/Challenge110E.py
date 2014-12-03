@@ -1,3 +1,4 @@
+#!python2
 # Tui Popenoe
 # Challenge110E.py - Keyboard Shift
 
@@ -56,7 +57,7 @@ def main():
     if len(sys.argv) > 1:
         shift(sys.argv[1])
     else:
-        shift(raw_input())
+        shift(raw_input('Enter a string to shift: '))
 
 if __name__=='__main__':
     main()

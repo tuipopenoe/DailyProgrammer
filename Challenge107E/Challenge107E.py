@@ -1,3 +1,4 @@
+#!python2
 # Tui Popenoe
 # Challenge107E.py All Possible Decodings
 
@@ -32,23 +33,23 @@ code = {
     'z' : 26
 }
 
-def allDecodings(string, output):
+def all_decodings(string, output):
     for i in range(0, len(string)-1, 2):
         if string[i] == 1 or string[i] == 2:
             output.append(string[i])
             output.append(string[i+1])
-            output.append(allDecodings(string[i:], output))
+            output.append(all_decodings(string[i:], output))
             output.append(string[i] + string[i+1])
         else:
             output.append(string[i] + string[i+1])
-            output.append(allDecodings(string[i+1:], output))
+            output.append(all_decodings(string[i+1:], output))
     return output
 
 def main():
     if len(sys.argv) > 1:
-        print(allDecodings(sys.argv[1], list()))
+        print(all_decodings(sys.argv[1], []))
     else:
-        print(allDecodings(raw_input(), list()))
+        print(all_decodings(raw_input('Enter a string to decode: '), []))
 
 if __name__=='__main__':
     main()

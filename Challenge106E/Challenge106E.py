@@ -1,11 +1,12 @@
+#!python2
 # Tui Popenoe
-# Challenge106E.py - Random Talker Part 1
+# challenge106E.py - Random Talker Part 1
 
 import sys
 
 punctuation = ['.', ',', ':', ';', '!', '?', '(', ')', '[', ']', '{', '}']
 
-def randomTalker(text):
+def random_talker(text):
     count = {}
     for i in text:
         if i[-1] in punctuation:
@@ -16,18 +17,20 @@ def randomTalker(text):
             count[i] += 1
     return count
 
-def topTen(dct):
+def top_ten(dct):
     items = sorted((v, k) for k, v in dct.iteritems()), reverse=True)
     return take(10, items.iteritems())
-
 
 def main():
     if len(sys.argv) > 1:
         f = open(sys.argv[1], 'r')
         l = f.read().split()
-        words =randomTalker(l)
-        print(topTen(words))
+        words =random_talker(l)
+        print(top_ten(words))
     else:
         l = raw_input().split()
-        words = randomTalker(l)
-        print(topTen(words))
+        words = random_talker(l)
+        print(top_ten(words))
+
+if __name__ == '__main__':
+    main()

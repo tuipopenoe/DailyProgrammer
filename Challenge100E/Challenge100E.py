@@ -1,3 +1,4 @@
+#!python2
 # Tui Popenoe
 # Challenge100E.py - Sleep Cycle Estimator
 
