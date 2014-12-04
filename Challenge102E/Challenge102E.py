@@ -4,22 +4,33 @@
 import random
 import sys
 
-def diceRoller(inp):
-    numbers = list()
-    output = list()
-    mark = False
-    for i in range(len(inp))
-        if inp[i] == 'd':
-            if i == 0:
-                numbers.append(1)
-                mark = True
-            else:
-                numbers.append(int(inp[:i]))
-                mark = True
-                if len(inp) > i +1:
-                    number.append(int(inp[i+1:]))
+def dice_roller(inp):
+    """Input a string in the form <A>d<B>(+/-)<C>"""
+    count = inp.split('d')[0]
+    if '-' in inp:
+        ch = '-'
+    else:
+        ch = '+'
+    split = inp.split(ch)
+    die_type = int(split[0][len(count)+1:])
+    modifier = int(split[1])
+    count = int(count)
+    dice_sum = 0
 
-    for i in range(1, numbers[0]):
-        output.append(random.randint())
+    for i in range(count):
+        dice_sum += random.randint(1, die_type)
 
-    return output
+    if ch == '-':
+        dice_sum -= modifier
+    else:
+        dice_sum += modifier
+    return dice_sum
+
+def main():
+    if len(sys.argv) > 1:
+        print(dice_roller(sys.argv[1]))
+    else:
+        print(dice_roller(raw_input("Enter a die to simulate: ")))
+
+if __name__ == '__main__':
+    main()

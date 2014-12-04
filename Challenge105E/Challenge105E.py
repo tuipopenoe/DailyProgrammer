@@ -1,39 +1,40 @@
+#!python2
 # Tui Popenoe
-# Challenge105E.py Word Unscrambler
+# challenge105E.py Word Unscrambler
 
 import sys
 
-def unscrambleWords(scrambledWords, wordList):
-    output = list()
-    for i in scrambledWords:
-        for k in wordList:
+def unscramble_words(scrambled_words, word_list):
+    """Unscramble the words in a wordfile passed in and match wordlist"""
+    output = []
+    for i in scrambled_words:
+        for k in word_list:
             if len(i) > len(k):
                 if anagram(i, k):
                     output.append(k)
             else:
                 if(anagram(k, i)):
                     output.append(k)
-
     print(output)
     return output
 
 
 def anagram(word1, word2):
-    for i in range(len(word1)):
-        for j in range(len(word2)):
-            if word1[i] == word2[j]:
+    for i, item1 in enumerate(word1):
+        for j, item2 in enumerate(word2):
+            if item1 == item2:
                 word1.pop(i)
-
-    if len(word1) == 0:
+    if not word1:
         return True
     else:
         return False
 
 def main():
     if len(sys.argv) > 1:
-        unscrambleWords(sys.argv[1], sys.argv[2])
+        unscramble_words(sys.argv[1], sys.argv[2])
     else:
-        pass
+        unscramble_words(raw_input('Enter a file: '),
+                         raw_input('Enter a wordlist: '))
 
 if __name__=='__main__':
     main()

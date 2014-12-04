@@ -1,10 +1,11 @@
+#!python2
 # Tui Popenoe
 # Challenge109E.py - Digits Check
 
 import sys
 import re
 
-def checkDigits(string):
+def check_digits(string):
     if re.match('\D', string):
         return False
     else:
@@ -12,9 +13,9 @@ def checkDigits(string):
 
 def main():
     if len(sys.argv) > 1:
-        print(checkDigits(sys.argv[1]))
+        print(check_digits(sys.argv[1]))
     else:
-        print(checkDigits(raw_input()))
+        print(check_digits(raw_input('Enter a string: ')))
 
 if __name__=='__main__':
     main()
