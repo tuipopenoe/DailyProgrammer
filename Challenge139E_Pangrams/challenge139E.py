@@ -1,3 +1,4 @@
+#!python2
 # Tui Popenoe
 # Challenge139E.py - Pangrams
 
