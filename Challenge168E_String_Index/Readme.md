@@ -1,4 +1,4 @@
-# Description
+## Description
 
 We know arrays. We index into them to get a value. What if we could apply this 
 to a string? But the index finds a "word". Imagine being able to parse the 
@@ -17,3 +17,9 @@ Any other character is just a buffer between words."
 Index can be any integer (this oddly enough includes negative value).
 If the index into the string does not make sense because the word does not 
 exist then return an empty string.
+
+### Input
+
+
+### Output
+

@@ -1,4 +1,4 @@
-# Description
+## Description
 Welcome to this week's rebooted challenges. While this challenge is very simple at its core (which I think gives it an Easy rating), it gives me a chance to teach a bit of physics while I'm at it, so I may as well!
 Newton's Law of Universal Gravitation says that:
 Any two objects in the universe attract each other gravitationally...
@@ -15,14 +15,16 @@ We're going to assume all planets are perfect spheres. This means you can find t
 Now, in case you are new to physics, you may need to know a little bit about forces. Forces are measured in Newtons (N) and measure, essentially, how hard an object is pushing another object. The object could be pushing physically - eg. pushing a lawn mower - or via an elementary force, such as Earth's gravity pushing you toward it. They can all be measured in Newtons. The force of a planet on something due to gravity is called weight - which is not to be confused with mass, which is measured in kilograms and is a measure of how much matter something contains. As we saw before, the more mass two objects have, the greater the force they exert on each other. As gravitational force is dependent on the product of the masses of both objects, an object will weigh more if either the object itself, or the planet, is heavier - which is why you weigh less on the Moon!
 Anyway, after that lengthy backstory, the challenge for you today is, given the dimensions of several planets and an object's mass, calculate how much force is applied on the object at the surface of the planet. Pretend the object is quite small for simplicity of your caluclations.
 This is certainly a lot of physics to get your teeth into, so if you need any help, leave a comment and either I or someone else should be happy to help you out.
-# Formal Inputs and Outputs
-## Input Description
+
+
+### Input Description
 You will be given a number M which is the mass of an object in kilograms, on its own line, for example:
 100
 Followed by a number N:
 4
 You will then, on separate lines, be given a list of N planets. This will be given as its name, its radius (in metres), and its average density (in kilograms per cubic metre), like so:
 Mercury, 2439700, 5427
-## Output Description
+
+### Output
 Print the weight (in Newtons) of the object if it were at the surface of each planet, like so:
 Mercury: 314.623

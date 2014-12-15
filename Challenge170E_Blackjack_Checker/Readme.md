@@ -1,3 +1,4 @@
+## Description
 Blackjack is a very common card game, where the primary aim is to pick up 
 cards until your hand has a higher value than everyone else but is less than 
 or equal to 21. This challenge will look at the outcome of the game, rather 
@@ -13,3 +14,12 @@ If the value of your hand is worth over 21, you are 'bust', and automatically
 lose.
 Your challenge is, given a set of players and their hands, print who wins (or 
 if it is a tie game.)
+
+### Input
+First you will be given a number, N. This is the number of players in the game.
+Next, you will be given a further N lines of input. Each line contains the name of the player and the cards in their hand, like so:
+Bill: Ace of Diamonds, Four of Hearts, Six of Clubs
+Would have a value of 21 (or 11 if you wanted, as the Ace could be 1 or 11.)
+
+### Output
+Print the winning player. If two or more players won, print "Tie".

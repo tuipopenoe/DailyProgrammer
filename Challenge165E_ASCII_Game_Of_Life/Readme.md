@@ -1,4 +1,4 @@
-# Description
+## Description
 
 This first challenge is based on a game (the mathematical variety - not quite 
 as fun!) called Conway's Game of Life. This is called a cellular automaton. 
@@ -26,7 +26,7 @@ number, simulate that many steps of the Game of Life.
 
 # Formal Inputs and Outputs
 
-## Input Description
+### Input
 You will be given a number N, and then two more numbers X and Y. After that 
 you will be given a textual ASCII grid of 'on' and 'off' states that is X 
 cells wide and Y cells tall. On the grid, a period or full-stop . will 
@@ -45,6 +45,6 @@ the lines coming out are the neighbours:
     ......  |\.../  ..\|/.
     |/...\  ......  ..-#-.
 
-## Output Description
+### Output
 Using that starting state, simulate N iterations of Conway's Game of Life. 
 Print the final state in the same format as above - . is off and # is on.
