@@ -13,7 +13,7 @@ def find_handles(filename):
                 output.append(('@' + i[2:] + ' : ' + i))
             elif i[0:1] == 'a':
                 output.append('@' + i[1:] + ' : ' + i)
-    output.sort(key = lambda s: len(s))
+    output.sort(key = len)
     return '\n'.join([' '.join(output[0:10]), ' '.join(output[-10:])])
 
 def main():
