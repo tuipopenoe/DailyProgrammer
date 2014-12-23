@@ -6,7 +6,7 @@ from sys import argv
 
 def column_conundrum(cols, col_width, space_width, text):
     line_width = cols * col_width + (cols - 1) * cols
-    lines = [text[line_width:i+n] for i in range(0, line_width), n]
+    for i in 
 
 
 
