@@ -6,17 +6,17 @@ equal that amount of money."""
 
 import sys
 
-def changeCalculator(n):
+def change_calculator(n):
     #Convert dollar input to coin input
     n = int(float(n) * 100)
-    coins = minCoins(n)
+    coins = min_coins(n)
     print("Quarters", coins[0])
     print("Dimes", coins[1])
     print("Nickels", coins[2])
     print("Pennies", coins[3])
 
 
-def minCoins(n):
+def min_coins(n):
     # List storing change in [Quarters, Dimes, Nickels, Pennies]
     change = [0, 0, 0, 0]
     if n / 25 > 0:
@@ -31,15 +31,14 @@ def minCoins(n):
     if n / 1 > 0:
         change[3] = n / 1
         n = n % 1
-
     return change
 
 def main():
     if len(sys.argv) > 1:
-        changeCalculator(float(sys.argv[1]))
+        change_calculator(float(sys.argv[1]))
     else:
         print("Enter an amount of money to be converted: ")
-        changeCalculator(int(raw_input()))
+        change_calculator(int(raw_input()))
 
 if __name__ == "__main__":
     main()

@@ -17,7 +17,7 @@ def main():
     if len(sys.argv) > 1:
         print(bytelandian_exchange(int(sys.argv[1])))
     else:
-        print(bytelandian_exchange(int(raw_input('Enter value to convert: '))))
+        print(bytelandian_exchange(int(sys.stdin.readline())))
 
 
 if __name__ == '__main__':

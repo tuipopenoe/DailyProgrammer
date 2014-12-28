@@ -5,11 +5,12 @@
 import sys
 
 def analyze():
-    events = int(raw_input())
+    events = int(sys.stdin.readline())
     rooms = {}
     for i in range(events):
         # Visitor ID, Room Index, In/Out, Timestamp
-        data = raw_input().split()
+        data = sys.stdin.readline().split()
+        print(data)
         # Initialize key value pair if doesn't exist
         if data[1] not in rooms:
             rooms[data[1]] = [0, 0]
