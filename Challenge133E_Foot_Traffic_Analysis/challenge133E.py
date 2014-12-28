@@ -9,18 +9,19 @@ def analyze():
     rooms = {}
     for i in range(events):
         # Visitor ID, Room Index, In/Out, Timestamp
-        line = raw_input().split()
-        line[0] = int(line[0])
-        line[1] = int(line[1])
-        line[3] = int(line[3])
-        if line[2] == 'I':
-            # Increase time
-            rooms.get(line[0], line[0])[0] += line[3]
-            # Increase visitor count
-            rooms.get(line[0], line[0])[1] += 1
-        elif line[2] == 'O':
+        data = raw_input().split()
+        # Initialize key value pair if doesn't exist
+        if data[1] not in rooms:
+            rooms[data[1]] = [0, 0]
+        # If the In/Out flag is 'I'
+        if data[2].upper() == 'I':
+            # Increase time value[0]
+            rooms[data[1]][0] -= int(data[3])
+            # Increase visitor count value[1]
+            rooms[data[1]][1] += 1
+        elif data[2].upper() == 'O':
             # Decrease time
-            rooms.get(line[0], line[0])[0] -= line[3]
+            rooms[data[1]][0] += int(data[3])
         else:
             # Error
             print('Error')
