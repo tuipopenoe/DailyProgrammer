@@ -1,7 +1,12 @@
+## Description
 Write a function graph(f, low, high, tests) that outputs a probability graph of the function f from range low to high (inclusive) over tests tests (i.e., counting the frequencies of f() outputs). f takes no arguments and returns an integer, low, high and tests are all integer values. For example, a function f that simulates two-dice rolls:
 def two_dice():
     return random.randint(1, 6) + random.randint(1, 6)
+
+### Input
 Then graph(f, 2, 12, 10000) should output something roughly like:
+
+### Output
   2: ##
   3: #####
   4: #######
