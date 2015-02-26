@@ -5,10 +5,12 @@
 from graphics import *
 
 def draw_square():
-    win =  GraphWin()
-    pt = Point(100,50)
-    square = Rectangle(Point(20, 10), pt)
+    win =  GraphWin("New Square", 100, 100)
+    pt = Point(100, 100)
+    square = Rectangle(Point(20, 20), pt)
     square.draw(win)
+    win.getMouse()
+    win.close()
 
 def main():
     draw_square()
